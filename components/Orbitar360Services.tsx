@@ -1,6 +1,6 @@
 "use client";
 import { useT } from "@/lib/useT";
-import MenuServices from "./MenuServices";
+// import MenuServices from "./MenuServices";
 import { Forward } from "@/lib/icons";
 import { useInView } from "react-intersection-observer";
 
@@ -39,10 +39,12 @@ const Orbitar360Services = () => {
         className={`w-full lg:w-2/5 pt-20 pb-8 px-4 flex items-center justify-end relative ${inView ? "animate-fade-right" : ""}`}
       >
         <div className="w-full max-w-md flex flex-col gap-y-8">
-          <div className="mb-8">
+          {/* <div className="mb-8">
             <MenuServices />
-          </div>
-          <h2 className="font-bold text-3xl">{t.Orbitar360Services.title}</h2>
+          </div> */}
+          <h2 className="font-bold text-3xl mb-4">
+            {t.Orbitar360Services.title}
+          </h2>
           <nav className="flex flex-col gap-y-4">
             {data.map((item, index) => (
               <div key={index} className="flex gap-x-4 items-center">
@@ -70,14 +72,12 @@ const Orbitar360Services = () => {
       </div>
       <div
         className={`w-full lg:w-3/5 bg-no-repeat relative h-[80vh] lg:h-auto ${inView ? "animate-fade-left" : ""}`}
-        style={{
-          backgroundImage: "url(/images/orbitar-services-1.jpg)",
-          backgroundSize: "cover",
-        }}
       >
-        <div className="absolute bottom-8 left-8">
-          <MenuServices />
-        </div>
+        <iframe
+          src="https://my.matterport.com/show/?m=Hkvy9cuP7Qp"
+          title="Orbitar360"
+          className="w-full h-full"
+        />
       </div>
     </section>
   );
