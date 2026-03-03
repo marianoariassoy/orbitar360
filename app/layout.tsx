@@ -22,6 +22,22 @@ export const metadata: Metadata = {
   icons: {
     icon: "/assets/favicon.svg",
   },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "https://orbitar360.com",
+    title: "Orbitar 360",
+    description:
+      "Orbitar 360 crée des accès numériques à des biens immobiliers et des espaces réels pour permettre aux personnes de les visiter en profondeur, à distance, prendre des mesures et projeter librement avant de contacter un commercial.",
+    images: [
+      {
+        url: "/images/cover.jpg",
+        width: 1080,
+        height: 1080,
+        alt: "Orbitar 360",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
