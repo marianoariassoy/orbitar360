@@ -26,7 +26,7 @@ p {
 
 .text-4xl {
   font-size: 2.8rem;
-  line-height: 0.8;
+  line-height: 1;
 }
 
 .text-3xl {
@@ -40,7 +40,7 @@ p {
 
 @media (max-width: 640px) {
   .text-4xl {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
   .text-3xl {
     font-size: 1.5rem;

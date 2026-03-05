@@ -2,8 +2,6 @@
 import { useT } from "@/lib/useT";
 import Lan from "./Lan";
 import { Forward } from "@/lib/icons";
-import { Fade } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
 import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
@@ -17,14 +15,16 @@ const Hero = () => {
     {
       image: "/images/hero-1.jpg",
     },
-    {
-      image: "/images/hero-2.jpg",
-    },
   ];
 
   return (
     <section id="hero" className="h-screen w-screen relative" ref={ref}>
-      <div className="absolute h-screen w-full z-20 pt-[15vh] pb-[5vh] px-8 flex flex-col items-center justify-between animate-fade-in">
+      <div
+        className="absolute h-screen w-full z-20 pt-20 lg:pt-[15vh] pb-[5vh] px-8 flex flex-col items-center justify-between animate-fade-in 
+      from-black/60 to-transparent bg-linear-to-b
+      
+      "
+      >
         <div className=" text-center">
           <h1 className="font-bold text-4xl text-center mb-2">
             {t.hero.title}
@@ -49,24 +49,12 @@ const Hero = () => {
         <Lan />
       </div>
 
-      <Fade
-        autoplay={true}
-        duration={4000}
-        transitionDuration={500}
-        infinite={true}
-        pauseOnHover={false}
-        arrows={false}
-      >
-        {data.map((item, index) => (
-          <div
-            key={index}
-            className={`h-screen w-screen bg-center bg-cover ${inView ? "animate-fade-in" : ""}`}
-            style={{
-              backgroundImage: `url(${item.image})`,
-            }}
-          ></div>
-        ))}
-      </Fade>
+      <div
+        className={`h-screen w-screen bg-center bg-cover ${inView ? "animate-fade-in" : ""}`}
+        style={{
+          backgroundImage: `url(${data[0].image})`,
+        }}
+      ></div>
     </section>
   );
 };

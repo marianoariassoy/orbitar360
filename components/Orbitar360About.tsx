@@ -27,9 +27,9 @@ const Orbigar360About = () => {
           <div className="absolute right-8 top-8">
             <Points size="lg" />
           </div>
-          <div className="flex flex-col gap-y-6 mt-10 lg:mt-0">
+          <div className="w-full overflow-hidden flex flex-col gap-y-6 mt-10 lg:mt-0">
             <div
-              className="aspect-square rounded-2xl p-4 relative"
+              className="w-full overflow-hidden aspect-square rounded-2xl p-4 relative"
               style={{
                 backgroundImage: "url(/images/orbitar-img.jpg)",
                 backgroundSize: "cover",
@@ -48,7 +48,7 @@ const Orbigar360About = () => {
               </span>
             </div>
           </div>
-          <div className="flex flex-col gap-y-6 lg:not-even:pt-10">
+          <div className="flex flex-col gap-y-6 lg:not-even:pt-10 text-center lg:text-left">
             <h2 className="font-bold text-3xl">{t.orbitar360About.title}</h2>
             <p className="whitespace-break-spaces text-sm">
               {t.orbitar360About.description}
@@ -58,12 +58,10 @@ const Orbigar360About = () => {
                 <img
                   src="/assets/pin.svg"
                   alt="Logo Location"
-                  className="w-6"
+                  className="w-8"
                 />
               </span>
-              <p className="text-sm whitespace-break-spaces">
-                {t.orbitar360About.address}
-              </p>
+              <p className="text-sm text-left">{t.orbitar360About.address}</p>
             </div>
           </div>
         </div>
