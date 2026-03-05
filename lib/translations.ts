@@ -22,13 +22,10 @@ El resultado es un proceso más eficiente, con interesados mejor informados y si
     },
     orbitar360About: {
       title: "Qué es Orbitar 360?",
-      description: `Orbitar 360 es un servicio de relevamiento digital de
-espacios que genera un recorrido interactivo accesible
-mediante un enlace y un código QR.
-Permite explorar un inmueble o espacio exterior como si se
-estuviera allí: navegar libremente, observar detalles,
-tomar medidas y volver a visitarlo cuantas veces sea
-necesario.
+      description: `Orbitar 360 es un servicio de relevamiento digital de espacios que genera un recorrido interactivo accesible mediante un enlace y un código QR.
+
+Permite explorar un inmueble o espacio exterior como si se estuviera allí: navegar libremente, observar detalles, tomar medidas y volver a visitarlo cuantas veces sea necesario.
+
 El servicio es ideal para:
 • Inmuebles residenciales o comerciales
 • Locales y salones
@@ -50,9 +47,7 @@ Haguenau - Estrasburgo, Madrid y Lisboa.`,
       title: "Código QR como diferencial",
       description: `El código QR que entrega Orbitar 360 no está pensado para un único soporte, sino para acompañar al espacio allí donde se lo comunique.
 
-Puede colocarse en una vidriera, en un anuncio impreso, en
-un folleto, en una revista, en la puerta de un museo, en un
-cartel temporal o compartirse digitalmente.
+Puede colocarse en una vidriera, en un anuncio impreso, en un folleto, en una revista, en la puerta de un museo, en un cartel temporal o compartirse digitalmente.
 
 Un mismo código, múltiples puntos de acceso.`,
     },
@@ -107,14 +102,15 @@ The result is an efficient process, with more informed interests and without cha
     orbitar360About: {
       title: "What is Orbitar 360?",
       description: `Orbitar 360 is a digital tour service of real estate spaces that generates an interactive tour accessible through a link and a QR code.
+
 It allows you to explore a residential or commercial property as if you were there: navigate freely, observe details, take measurements and return to visit it as many times as necessary.
+
 The service is ideal for:
 • Residential properties or commercial spaces
 • Locals and rooms
 • Galleries, parks and outdoor spaces
 • Any space that needs to be understood before a physical visit`,
-      address: `Service available in:
-Haguenau - Estrasburgo, Madrid and Lisbon.`,
+      address: `Service available in: Haguenau - Estrasburgo, Madrid and Lisbon.`,
     },
     Orbitar360Services: {
       title: "What can the user do?",
@@ -176,24 +172,16 @@ The same code, multiple access points.`,
     },
     orbitar360Hero: {
       title: "Présentez un espace sans être présent",
-      description: `Orbitar 360 crée des accès numériques à des biens immobiliers età des espaces réels,permettant aux personnes de les parcourir en
-profondeur, à distance, de prendre des mesures et de s’y projeter
-librement avant de contacter un conseiller.
+      description: `Orbitar 360 crée des accès numériques à des biens immobiliers età des espaces réels,permettant aux personnes de les parcourir en profondeur, à distance, de prendre des mesures et de s’y projeter librement avant de contacter un conseiller.
 
-Le résultat est un processus plus efficace, avec des prospects
-mieux informés, sans modifier la façon de travailler de l’agence
+Le résultat est un processus plus efficace, avec des prospects mieux informés, sans modifier la façon de travailler de l’agence
 immobilière.`,
     },
     orbitar360About: {
       title: "Qu’est-ce qu’Orbitar 360 ?",
-      description: `Orbitar 360 est un service de relevé numérique d’espaces
-qui génère une visite interactive accessible via un lien et un
-code QR.
+      description: `Orbitar 360 est un service de relevé numérique d’espaces qui génère une visite interactive accessible via un lien et un code QR.
 
-Il permet d’explorer un bien immobilier ou un espace
-extérieur comme si l’on y était : navigation libre,
-observation des détails, prise de mesures et visites
-répétées autant de fois que nécessaire.
+Il permet d’explorer un bien immobilier ou un espace extérieur comme si l’on y était : navigation libre, observation des détails, prise de mesures et visites répétées autant de fois que nécessaire.
 
 Le service est idéal pour:
 • Les immeubles résidentiels ou commerciaux
@@ -213,12 +201,9 @@ Madrid et Lisbonne.`,
     },
     Orbitar360Qr: {
       title: "Le code QR comme élément différenciateur",
-      description: `Le code QR fourni par Orbitar 360 n’est pas pensé pour un
-support unique, mais pour accompagner l’espace partout où il est communiqué.
+      description: `Le code QR fourni par Orbitar 360 n’est pas pensé pour un support unique, mais pour accompagner l’espace partout où il est communiqué.
 
-Il peut être placé en vitrine, sur une annonce imprimée, un
-dépliant, un magazine, à l’entrée d’un musée, sur un
-panneau temporaire ou partagé numériquement.
+Il peut être placé en vitrine, sur une annonce imprimée, un dépliant, un magazine, à l’entrée d’un musée, sur un panneau temporaire ou partagé numériquement.
 
 Un seul code, plusieurs points d’accès.`,
     },
@@ -267,22 +252,21 @@ Un seul code, plusieurs points d’accès.`,
     orbitar360Hero: {
       title: "Mostrar um espaço sem estar presente",
       description: `Orbitar 360 cria acessos digitais a imóveis e espaços reais para que as pessoas possam visitá-los em profundidade, remotamente, tomar medidas e projetar livremente antes de entrar em contato com um comercial.
-        
-        O resultado é um processo mais eficiente, com interessados mais informados e sem mudar a forma de trabalhar da empresa imobiliária.`,
+      
+  O resultado é um processo mais eficiente, com interessados mais informados e sem mudar a forma de trabalhar da empresa imobiliária.`,
     },
     orbitar360About: {
       title: "O que é Orbitar 360?",
-      description: `Orbitar 360 é um serviço de visita digital de
-espaços reais que gera um tour interativo acessível
-através de um link e um código QR.
-Permite explorar um imóvel ou espaço exterior como se     estivesse lá: navegar livremente, observar detalhes, tomar medidas e voltar a visitá-lo quantas vezes forem necessárias.
+      description: `Orbitar 360 é um serviço de visita digital de espaços reais que gera um tour interativo acessível através de um link e um código QR.
+
+Permite explorar um imóvel ou espaço exterior como se estivesse lá: navegar livremente, observar detalhes, tomar medidas e voltar a visitá-lo quantas vezes forem necessárias.
+
 O serviço é ideal para:
 • Imóveis residenciais ou comerciais
 • Locais e quartos
 • Galerias, parques e espaços exteriores
 • Qualquer espaço que precise ser compreendido antes de uma visita física`,
-      address: `Serviço disponível em:
-Haguenau – Estrasburgo, Madrid e Lisboa.`,
+      address: `Serviço disponível em: Haguenau - Estrasburgo, Madrid e Lisboa.`,
     },
     Orbitar360Services: {
       title: "O que o usuário pode fazer?",
