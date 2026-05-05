@@ -1,10 +1,43 @@
 "use client";
 import { useT } from "@/lib/useT";
+import { useLanguage } from "@/context/LanguageContext";
 import SectionLarge from "./SectionLarge";
 import Points from "./Points";
 import { useInView } from "react-intersection-observer";
+import { useEffect, useState } from "react";
+import Axios from "axios";
+import Loader from "@/components/Loader";
+
+interface Data {
+  title_es: string;
+  title_en: string;
+  title_fr: string;
+  title_pr: string;
+  text_es: string;
+  text_en: string;
+  text_fr: string;
+  text_pr: string;
+}
 
 const Orbigar360About = () => {
+  const { locale } = useLanguage();
+  const api = process.env.NEXT_PUBLIC_API_URL + "/textos";
+  const [data, setData] = useState<Data[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await Axios.get(api);
+        setData(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, [api]);
+
   const t = useT();
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -48,22 +81,37 @@ const Orbigar360About = () => {
               </span>
             </div>
           </div>
-          <div className="flex flex-col gap-y-6 lg:not-even:pt-10 text-center lg:text-left">
-            <h2 className="font-bold text-3xl">{t.orbitar360About.title}</h2>
-            <p className="whitespace-break-spaces text-sm">
-              {t.orbitar360About.description}
-            </p>
-            <div className="flex items-center gap-x-4">
-              <span>
-                <img
-                  src="/assets/pin.svg"
-                  alt="Logo Location"
-                  className="w-8"
-                />
-              </span>
-              <p className="text-sm text-left">{t.orbitar360About.address}</p>
+          {loading ? (
+            <div>
+              <Loader />
             </div>
-          </div>
+          ) : (
+            <div className="flex flex-col gap-y-6 lg:not-even:pt-10 text-center lg:text-left">
+              <h2 className="font-bold text-3xl">
+                {locale === "es" && data[1].title_es}
+                {locale === "en" && data[1].title_en}
+                {locale === "fr" && data[1].title_fr}
+                {locale === "pt" && data[1].title_pr}
+              </h2>
+
+              <p className="whitespace-break-spaces text-sm">
+                {locale === "es" && data[1].text_es}
+                {locale === "en" && data[1].text_en}
+                {locale === "fr" && data[1].text_fr}
+                {locale === "pt" && data[1].text_pr}
+              </p>
+              <div className="flex items-center gap-x-4">
+                <span>
+                  <img
+                    src="/assets/pin.svg"
+                    alt="Logo Location"
+                    className="w-8"
+                  />
+                </span>
+                <p className="text-sm text-left">{t.orbitar360About.address}</p>
+              </div>
+            </div>
+          )}
         </div>
       </SectionLarge>
     </section>

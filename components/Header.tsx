@@ -45,7 +45,7 @@ const Header = () => {
       >
         <div className="lg:flex-1 w-1/2">
           <Link href="/" onClick={(e) => handleClick(e, "top")}>
-            <div className="px-8 py-4 bg-primary justify-center items-center inline-flex hover:bg-secondary transition-all">
+            <div className="px-8 py-4 bg-primary justify-center items-center inline-flex hover:px-10 transition-all">
               <img
                 src="/assets/logo.svg"
                 alt="Logo Orbitar"

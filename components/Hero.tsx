@@ -3,33 +3,46 @@ import { useT } from "@/lib/useT";
 import Lan from "./Lan";
 import { Forward } from "@/lib/icons";
 import { useInView } from "react-intersection-observer";
+import { useEffect, useState } from "react";
+import Axios from "axios";
+import Loader from "@/components/Loader";
+
+interface Data {
+  image: string;
+}
 
 const Hero = () => {
+  const api = process.env.NEXT_PUBLIC_API_URL + "/home";
+  const [data, setData] = useState<Data[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await Axios.get(api);
+        setData(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, [api]);
+
   const t = useT();
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0,
   });
 
-  const data = [
-    {
-      image: "/images/hero-1.jpg",
-    },
-  ];
-
   return (
     <section id="hero" className="h-screen w-screen relative" ref={ref}>
-      <div
-        className="absolute h-screen w-full z-20 pt-20 lg:pt-[15vh] pb-[5vh] px-8 flex flex-col items-center justify-between animate-fade-in 
-      from-black/60 to-transparent bg-linear-to-b
-      
-      "
-      >
-        <div className=" text-center">
+      <div className="absolute h-screen w-full z-20 pt-20 lg:pt-[15vh] pb-[5vh] px-8 flex flex-col items-center justify-between animate-fade-in from-black/60 to-transparent bg-linear-to-b">
+        <div className="text-center">
           <h1 className="font-bold text-4xl text-center mb-2">
             {t.hero.title}
           </h1>
-          <p className="text-lg">{t.hero.description}</p>
+          <p className="text-lg lg:text-xl">{t.hero.description}</p>
         </div>
 
         <a
@@ -49,12 +62,18 @@ const Hero = () => {
         <Lan />
       </div>
 
-      <div
-        className={`h-screen w-screen bg-center bg-cover ${inView ? "animate-fade-in" : ""}`}
-        style={{
-          backgroundImage: `url(${data[0].image})`,
-        }}
-      ></div>
+      {loading ? (
+        <div className="absolute h-screen w-screen z-50">
+          <Loader />
+        </div>
+      ) : (
+        <div
+          className={`h-screen w-screen bg-center bg-cover ${inView ? "animate-fade-in" : ""}`}
+          style={{
+            backgroundImage: `url(${data[0].image})`,
+          }}
+        ></div>
+      )}
     </section>
   );
 };
