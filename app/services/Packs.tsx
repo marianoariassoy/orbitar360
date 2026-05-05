@@ -75,19 +75,21 @@ const Packs = () => {
                 </span>
               </div>
               <div className="flex flex-col gap-y-4 px-4 lg:px-6 pb-6">
-                <h4 className="font-bold">
-                  {locale === "es" && item.subtitle_es}
-                  {locale === "en" && item.subtitle_en}
-                  {locale === "fr" && item.subtitle_fr}
-                  {locale === "pt" && item.subtitle_pr}
-                </h4>
+                <h4 className="font-bold">{t.services.subtitle}</h4>
                 <p className="whitespace-break-spaces text-sm">
                   {locale === "es" && item.text_es}
                   {locale === "en" && item.text_en}
                   {locale === "fr" && item.text_fr}
                   {locale === "pt" && item.text_pr}
                 </p>
-                <span className="font-bold">{item.subtitle_es}</span>
+                {item.subtitle_fr && (
+                  <span className="font-bold">
+                    {locale === "es" && item.subtitle_es}
+                    {locale === "en" && item.subtitle_en}
+                    {locale === "fr" && item.subtitle_fr}
+                    {locale === "pt" && item.subtitle_pr}
+                  </span>
+                )}
                 <span className="font-extrabold text-2xl not-even:lg:text-3xl">
                   {item.price
                     ? item.price + " €"
