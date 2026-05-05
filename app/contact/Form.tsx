@@ -29,14 +29,17 @@ const Form = () => {
   const onSubmit: SubmitHandler<User> = async (data) => {
     setSending(true);
     const sender = {
-      to: "",
-      from: "",
-      from_name: "",
-      subject: "Contact",
+      to: "info@orbitar-360.com",
+      from: "Obitar 360 <no-reply@orbitar-360.com>",
+      from_name: "Obitar 360",
+      subject: "Contacto",
     };
 
     try {
-      const response = await axios.post("", { ...data, ...sender });
+      const response = await axios.post(
+        "https://backend.orbitar-360.com/send-email.php",
+        { ...data, ...sender },
+      );
       if (response?.data?.error) {
         setError(response.data.message);
         setSending(false);
@@ -60,7 +63,7 @@ const Form = () => {
   if (sended)
     return (
       <div className="flex justify-center">
-        <div className="text-xl lg:text-2xl text-center font-bold text-white rounded-full bg-browndark2 py-4 px-8 w-fit">
+        <div className="text-xl lg:text-2xl font-bold text-white rounded-full bg-browndark2 py-4 px-8 w-fit">
           {t.contact.success}
         </div>
       </div>
