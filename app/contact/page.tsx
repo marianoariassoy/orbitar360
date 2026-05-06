@@ -40,12 +40,12 @@ const Contact = () => {
                   </a>
                 </span>
                 <a
-                  href="http://www.orbitar360.com"
+                  href="https://www.orbitar360.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:underline underline-offset-4 "
                 >
-                  www.orbitar360.com
+                  www.orbitar-360.com
                 </a>
               </div>
             </div>
